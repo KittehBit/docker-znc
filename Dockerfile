@@ -28,5 +28,8 @@ CMD ["--foreground"]
 # docker cp deleteme:/home/znc/.znc/ /path/to/Dockerfile/
 # That copies the .znc folder in the same directory as the Dockerfile
 #
+# Build your own configured image with the config you just created
+# docker build -t kittehbit/znc .
+#
 # To run the configured container:
 # docker run -d -p 6667:6667 -p 6697:6697 -p 7070:7070 kittehbit/znc

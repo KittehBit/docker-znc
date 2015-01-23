@@ -22,10 +22,11 @@ CMD ["--foreground"]
 # Usage:
 #
 # To create config files:
-# docker run -it --name deleteme 76ec170d8e90 --makeconf
+# docker run -it --name deleteme kittehbit/znc --makeconf
 #
 # To copy them to the host:
-# docker cp deleteme:/home/znc/.znc/ /path/to/Dockerfile
+# docker cp deleteme:/home/znc/.znc/ /path/to/Dockerfile/
+# That copies the .znc folder in the same directory as the Dockerfile
 #
 # To run the configured container:
-# docker run -d -p 6667:6667 -p 6697:6697 -p 7070:7070 imagename
+# docker run -d -p 6667:6667 -p 6697:6697 -p 7070:7070 kittehbit/znc

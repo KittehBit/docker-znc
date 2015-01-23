@@ -1,4 +1,5 @@
-# Dockerfile version 1.0
+# Version 1.0
+# Docker version 1.4.1
 # CentOS 7
 # ZNC 1.4
 

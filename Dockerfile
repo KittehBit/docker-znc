@@ -31,5 +31,5 @@ CMD ["--foreground"]
 # Build your own configured image with the config you just created
 # docker build -t kittehbit/znc .
 #
-# To run the configured container:
-# docker run -d -p 6667:6667 -p 6697:6697 -p 7070:7070 kittehbit/znc
+# To run the configured container in the background with open ports:
+# docker run -d --name znc -p 6667:6667 -p 6697:6697 -p 7070:7070 kittehbit/znc

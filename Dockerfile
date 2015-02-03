@@ -5,16 +5,22 @@
 
 FROM centos:7
 
-MAINTAINER KittehBit
+MAINTAINER KittehBit <mail@kittehbit.me>
 
+# Add a user for ZNC
 RUN useradd -m -s /bin/bash znc
 
+# Install EPEL and ZNC
 RUN	yum -y install epel-release && \
 	yum -y install znc
 
+# Optionally copy previous ZNC data to the new image
 COPY .znc/ /home/znc/.znc/
 RUN chown -R znc.znc /home/znc/
 
+# Expose the ports and start ZNC with its own user
+# -- foreground is needed so the container keeps running
+# Ports 6667 and 6697 are common IRC, port 7070 is my custom port for ZNC
 USER znc
 EXPOSE 6667 6697 7070
 ENTRYPOINT ["znc"]
